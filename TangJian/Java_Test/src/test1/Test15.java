@@ -1,6 +1,6 @@
 package test1;
 
-import java.util.Scanner;
+        import java.util.Scanner;
 
 public class Test15 {
     public static void main(String[] args) {
@@ -11,7 +11,12 @@ public class Test15 {
         for(int i=0;i<array.length;i++){
             array[i]=(char) (array[i]^2000);//对每个数组元素进行异或运算
         }
-        System.out.println("加密或解密结果如下");
+        System.out.println("加密结果如下");
+        System.out.println(new String(array));//输出密钥
+        for(int i=0;i<array.length;i++){
+            array[i]=(char) (array[i]^2000);//对每个数组元素进行异或运算
+        }
+        System.out.println("解密结果如下");
         System.out.println(new String(array));//输出密钥
     }
 }
