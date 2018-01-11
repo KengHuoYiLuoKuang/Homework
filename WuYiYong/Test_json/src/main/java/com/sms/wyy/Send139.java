@@ -18,8 +18,9 @@ public class Send139 extends TimerTask
 {
     public static void main( String[] args )  throws Exception {
 
-        Timer timer = new Timer();
-        timer.schedule(new Send139(), 1000, 20*1000);
+       // Timer timer = new Timer();
+        //timer.schedule(new Send139(), 1000, 20*1000);
+        send();
 
     }
     @Override
