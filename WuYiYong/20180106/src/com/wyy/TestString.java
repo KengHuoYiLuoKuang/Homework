@@ -8,10 +8,14 @@ public class TestString {
         //调用排序算法
         int start = 0;
         int end = s.length-1;
-        QkSort.sortt(s,start,end,new StringComparator());
+        //快速排序
+        QkSort.qkSrot(s,start,end,new StringComparator());
+        //归并排序
+        //QkSort.mergeSort(s,new StringComparator());
         //输出排序后的结果
+        System.out.println("排序后为：");
         for(int i = 0; i<s.length; i++){
-            System.out.println(s[i]);
+            System.out.print(s[i]+"\t");
         }
     }
 }
