@@ -16,7 +16,7 @@ public class Content {
             //读取配置文件
             Properties prop= PropertyUtil.getproperty("url.properties");
             //解密key
-            String key = DecryptionAes.decrypt(prop.getProperty("key"),"wuyiyong");
+            String key = DecryptionAES.decrypt(prop.getProperty("key"),"wuyiyong");
             //拼接url
             String url = prop.getProperty("url")+"key="+key+"&page=" + page + "&rows="+prop.getProperty("rows")+"&sort="+prop.getProperty("sort")+"&time=" + time;
             //发http获取返回的jsonz字符串
