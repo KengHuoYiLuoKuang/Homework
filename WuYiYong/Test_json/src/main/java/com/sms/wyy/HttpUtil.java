@@ -8,9 +8,10 @@ import java.io.IOException;
 
 public class HttpUtil {
     //发送http获取返回的json
-    public static Response httpGet(String url) throws IOException {
+    public static String httpGet(String url) throws IOException {
         OkHttpClient mOkHttpClient = new OkHttpClient();
         final Request request = new Request.Builder().url(url).build();
-        return mOkHttpClient.newCall(request).execute();
+        Response response = mOkHttpClient.newCall(request).execute();
+        return  response.body().string();
     }
 }

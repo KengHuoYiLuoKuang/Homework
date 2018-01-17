@@ -11,5 +11,6 @@ public class Send139 {
         //获取远程资源并发送邮件
         EmailUtil.send(ContentUtil.getcontent()+"==>>(^.^)(^.^)晚安!");
 
+
     }
 }

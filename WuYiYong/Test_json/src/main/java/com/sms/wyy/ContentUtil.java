@@ -24,10 +24,10 @@ public class ContentUtil {
             String key = DecryptionTool.deciphering(prop.getProperty("key"));
             //拼接url
             String url = prop.getProperty("url")+"key="+key+"&page=" + page + "&rows="+prop.getProperty("rows")+"&sort="+prop.getProperty("sort")+"&time=" + time;
-            //发http获取返回的json
-            Response response = HttpUtil.httpGet(url);
+            //发http获取返回的jsonz字符串
+            String response = HttpUtil.httpGet(url);
             //解析json
-            QueryResultInfo queryResultInfo = JSON.parseObject(response.body().string(), QueryResultInfo.class);
+            QueryResultInfo queryResultInfo = JSON.parseObject(response, QueryResultInfo.class);
             content = queryResultInfo.getResult().get(0).getContent();
             if (content.length() < 140) {
                 //System.out.println(content);
