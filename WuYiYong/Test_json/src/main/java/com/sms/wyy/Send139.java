@@ -8,13 +8,8 @@ import java.util.Properties;
  */
 public class Send139 {
     public static void main(String[] args) throws Exception {
-
-        //发送邮件
-        EmailUtil.send(ContentUtil.getcontent());
-
-
+        //获取远程资源并发送邮件
+        EmailUtil.send(ContentUtil.getcontent()+"==>>(^.^)(^.^)晚安!");
 
     }
-
-
 }

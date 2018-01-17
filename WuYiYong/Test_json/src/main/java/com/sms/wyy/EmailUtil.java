@@ -53,7 +53,7 @@ public class EmailUtil {
         message.setSubject(p.getProperty("title"));
 
         //邮件的文本内容，加入一些符号让结尾美美哒(^.^)(^.^)
-        message.setContent(content + "==>>(^.^)(^.^)晚安!", "text/html;charset=UTF-8");
+        message.setContent(content , "text/html;charset=UTF-8");
         // message.setContent(content.substring(0, content.length() - 1) + "==>>(^.^)(^.^)晚安!", "textml;charset=UTF-8");
         //返回创建好的邮件对象
         //5、发送邮件
