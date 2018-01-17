@@ -16,9 +16,9 @@ public class Content {
             //读取配置文件
             Properties prop= PropertyUtil.getproperty("url.properties");
             //解密key
-            String key = DecryptionAES.decrypt(prop.getProperty("key"),"wuyiyong");
+            String key = AESUtil.decrypt(prop.getProperty("key"),"wuyiyong");
             //拼接url
-            String url = prop.getProperty("url")+"key="+key+"&page=" + page + "&rows="+prop.getProperty("rows")+"&sort="+prop.getProperty("sort")+"&time=" + time;
+            String url = HttpUtil.createUrl(prop.getProperty("url"),key,page,prop.getProperty("rows"),prop.getProperty("srot"),time);
             //发http获取返回的jsonz字符串
             String response = HttpUtil.httpGet(url);
             //解析json
@@ -36,6 +36,5 @@ public class Content {
     //测试获取的笑话
     public static void main(String[] args) throws Exception {
         System.out.println(Content.getcontent());
-
     }
 }

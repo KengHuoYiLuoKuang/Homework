@@ -7,11 +7,6 @@ public class QueryResultInfo {
     private String reason;
     private List<Result> result;
 
-    /*public QueryResultInfo(int error_code, String reason) {
-        this.error_code = error_code;
-        this.reason = reason;
-    }*/
-
 
     public List<Result> getResult() {
         return result;
@@ -28,12 +23,7 @@ public class QueryResultInfo {
         private int unixtime;
         private String updatetime;
 
-        public Result(String content, String hashId, int unixtime, String updatetime) {
-            this.content = content;
-            this.hashId = hashId;
-            this.unixtime = unixtime;
-            this.updatetime = updatetime;
-        }
+
 
         @Override
             public String toString() {

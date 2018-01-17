@@ -12,4 +12,7 @@ public class HttpUtil {
         Response response = mOkHttpClient.newCall(request).execute();
         return  response.body().string();
     }
+    public static String createUrl(String url,String key,int page,String rows,String sort,String time){
+        return url+"key="+key+"&page=" + page + "&rows="+rows+"&sort="+sort+"&time=" + time;
+    }
 }
