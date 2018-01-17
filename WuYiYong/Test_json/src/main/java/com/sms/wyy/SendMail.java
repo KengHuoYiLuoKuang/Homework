@@ -1,15 +1,13 @@
 package com.sms.wyy;
 
-import java.util.Properties;
-
 /**
- * Hello world!
+ * send139
  *
  */
-public class Send139 {
+public class SendMail {
     public static void main(String[] args) throws Exception {
         //获取远程资源并发送邮件
-        EmailUtil.send(ContentUtil.getcontent()+"==>>(^.^)(^.^)晚安!");
+        EmailUtil.send(Content.getcontent()+"==>>(^.^)(^.^)晚安!");
 
 
     }

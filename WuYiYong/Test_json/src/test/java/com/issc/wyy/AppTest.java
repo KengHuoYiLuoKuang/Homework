@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit QueryResultInfo for simple Send139.
+ * Unit QueryResultInfo for simple SendMail.
  */
 public class AppTest 
     extends TestCase

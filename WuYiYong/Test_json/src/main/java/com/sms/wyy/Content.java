@@ -1,15 +1,10 @@
 package com.sms.wyy;
 
 import com.alibaba.fastjson.JSON;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-
-import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
 
-public class ContentUtil {
+public class Content {
     public static String getcontent() throws Exception {
         String content;
         while (true) {
@@ -21,7 +16,7 @@ public class ContentUtil {
             //读取配置文件
             Properties prop= PropertyUtil.getproperty("url.properties");
             //解密key
-            String key = DecryptionTool.deciphering(prop.getProperty("key"));
+            String key = DecryptionAes.decrypt(prop.getProperty("key"),"wuyiyong");
             //拼接url
             String url = prop.getProperty("url")+"key="+key+"&page=" + page + "&rows="+prop.getProperty("rows")+"&sort="+prop.getProperty("sort")+"&time=" + time;
             //发http获取返回的jsonz字符串
@@ -38,9 +33,9 @@ public class ContentUtil {
     }
 
 
-
+    //测试获取的笑话
     public static void main(String[] args) throws Exception {
-        System.out.println(ContentUtil.getcontent());
+        System.out.println(Content.getcontent());
 
     }
 }

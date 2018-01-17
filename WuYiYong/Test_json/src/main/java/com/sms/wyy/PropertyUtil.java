@@ -2,7 +2,6 @@ package com.sms.wyy;
 
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.Iterator;
 import java.util.Properties;
 
 public class PropertyUtil {
@@ -19,10 +18,8 @@ public class PropertyUtil {
    //测试方法
     public static void main(String[] args) throws Exception {
         Properties prop = PropertyUtil.getproperty("mail.properties");
-       Iterator it= prop.stringPropertyNames().iterator();
-        while (it.hasNext()){
-            String key = (String) it.next();
-            System.out.println(key+" "+prop.getProperty(key));
+        for (String key : prop.stringPropertyNames()) {
+            System.out.println(key + " " + prop.getProperty( key));
         }
     }
 }
