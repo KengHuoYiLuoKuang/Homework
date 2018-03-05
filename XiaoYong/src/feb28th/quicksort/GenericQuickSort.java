@@ -1,4 +1,4 @@
-package basestone.practice.feb28th;
+package feb28th.quicksort;
 
 //限定 T 为实现了 Comparable<> 接口的类
 // 或是实现了 Comparable<> 接口的类的子类

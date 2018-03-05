@@ -1,7 +1,10 @@
-package basestone.practice.feb28th;
+package feb28th.myarraylist;
 
 import java.util.Arrays;
 
+/**
+ * @author Administrator
+ */
 public class MyArrayList<T> {
     private Object[] elements = new Object[10];
     private int point = 0;

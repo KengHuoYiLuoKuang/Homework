@@ -1,4 +1,4 @@
-package basestone.practice.feb28th;
+package feb28th.quicksort;
 
 
 public class QuickSort {
