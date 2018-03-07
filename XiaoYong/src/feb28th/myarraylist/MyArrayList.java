@@ -2,9 +2,12 @@ package feb28th.myarraylist;
 
 import java.util.Arrays;
 
-/**
- * @author Administrator
- */
+ /**
+    *    @author  : XiaoYong
+    *    @date    : 2018/3/5 17:22
+    *    Description    :
+    */
+
 public class MyArrayList<T> {
     private Object[] elements = new Object[10];
     private int point = 0;

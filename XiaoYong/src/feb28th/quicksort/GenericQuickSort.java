@@ -1,9 +1,15 @@
 package feb28th.quicksort;
 
-//限定 T 为实现了 Comparable<> 接口的类
-// 或是实现了 Comparable<> 接口的类的子类
+ /**
+    *    @author  : XiaoYong
+    *    @date    : 2018/3/5 17:24
+    *    Description    : 支持泛型的快速排序算法
+    */
+
+
 public class GenericQuickSort {
 
+    //限定 T 为实现了 Comparable<> 接口的类或是实现了 Comparable<> 接口的类的子类
     public static <T extends Comparable<T>> void sort(T[] arr, int low, int high) {
         if (low < high) {
             int bridgeIndex = getBridgeIndex(arr, low, high);
