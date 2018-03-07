@@ -1,4 +1,4 @@
-package feb28th.myarraylist;
+package myarraylist;
 
 public class MyArrayListTest {
     public static void main(String[] args) {

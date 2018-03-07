@@ -1,4 +1,4 @@
-package feb28th.quicksort;
+package quicksort;
 
 import java.util.Random;
 
