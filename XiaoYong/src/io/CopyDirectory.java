@@ -9,12 +9,6 @@ import java.io.*;
  */
 public class CopyDirectory {
 
-    private static void createNewDirectory(File file, String newPath) throws IOException {
-        System.out.println(newPath);
-        File newFile = new File(newPath);
-        newFile.mkdirs();
-    }
-
     public static void copy(File file, String sourcePath, String targetPath) throws IOException {
         File newFile = null;
         String newPath = "";
@@ -23,7 +17,7 @@ public class CopyDirectory {
             File[] files = file.listFiles();
             if (files.length == 0) {
                 newPath = targetPath + file.getPath().substring(sourcePath.length() - 1);
-                createNewDirectory(file, newPath);
+                createNewDirectory(newPath);
                 return;
             }
             for (File f : files) {
@@ -32,12 +26,18 @@ public class CopyDirectory {
                 }
                 if (f.isFile()) {
                     newPath = targetPath + f.getParent().substring(sourcePath.length() - 1);
-                    createNewDirectory(f, newPath);
+                    createNewDirectory(newPath);
                     newFileName = targetPath + f.getPath().substring(sourcePath.length() - 1);
                     createNewFile(f, newFileName);
                 }
             }
         }
+    }
+
+    private static void createNewDirectory(String newPath) throws IOException {
+        System.out.println(newPath);
+        File newFile = new File(newPath);
+        newFile.mkdirs();
     }
 
     private static void createNewFile(File file, String newPath) {
