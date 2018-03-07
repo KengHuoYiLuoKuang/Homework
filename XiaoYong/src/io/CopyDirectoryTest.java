@@ -8,7 +8,7 @@ import java.io.IOException;
  * @date : 2018/3/7 20:04
  * Description    :
  */
-public class CopyDectoryTest {
+public class CopyDirectoryTest {
     public static void main(String[] args) throws IOException {
         File file = new File("D:\\ddd");
         String sourcePath = file.getParent();
