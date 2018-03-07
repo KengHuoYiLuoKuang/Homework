@@ -9,21 +9,13 @@ import java.io.*;
  */
 public class CopyDirectory {
 
-    public static void main(String[] args) throws IOException {
-        CopyDirectory copyDirectory = new CopyDirectory();
-        File file = new File("D:\\ddd");
-        String sourcePath = file.getParent();
-        String targetPath = "D:\\eee";
-        copyDirectory.copy(file, sourcePath, targetPath);
-    }
-
-    public void createNewDirectory(File file, String newPath) throws IOException {
+    private static void createNewDirectory(File file, String newPath) throws IOException {
         System.out.println(newPath);
         File newFile = new File(newPath);
         newFile.mkdirs();
     }
 
-    public void copy(File file, String sourcePath, String targetPath) throws IOException {
+    public static void copy(File file, String sourcePath, String targetPath) throws IOException {
         File newFile = null;
         String newPath = "";
         String newFileName = null;
@@ -48,7 +40,7 @@ public class CopyDirectory {
         }
     }
 
-    public void createNewFile(File file, String newPath) {
+    private static void createNewFile(File file, String newPath) {
         String str = null;
         File newFile = new File(newPath);
         FileInputStream fileInputStream = null;
